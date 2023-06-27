@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- Name your robot here -->
+<robot name ="justbot" xmlns:xacro="http://wiki.ros.org/xacro">
+
+	<!-- Include your urdf files here -->
+		<!-- Include Robot's urdf filepath -->
+		<!-- Include Tool's urdf filepath -->
+		<xacro:include filename="$(find justbot)/urdf/justbot.urdf"/>
+		<xacro:include filename="$(find justool)/urdf/justool.urdf"/>
+
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/justbot</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
+	
+	<!-- Create a joint between your robot and tool -->
+	<joint name="linkn_to_tool_joint" type="fixed">
+		<parent link="link_n"/>
+		<child link="base_tool" />
+		<!-- <origin xyz="0.8172 0.2329 0.0628" rpy="0 0 0"/> -->
+		<origin xyz="0 0 0" rpy="0 0 3.14159"/>
+  	</joint>
+	
+
+</robot>	
+
+

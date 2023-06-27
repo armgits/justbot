@@ -1,0 +1,15 @@
+justbot:
+  joint_1_controller:
+    pid: {p: 50, i: 50, d: 10}
+  joint_2_controller:
+    pid: {p: 750, i: 325, d: 50}
+  joint_3_controller:
+    pid: {p: 750, i: 350, d: 10}
+  joint_4_controller:
+    pid: {p: 150, i: 30, d: 10}
+  joint_5_controller:
+    pid: {p: 5, i: 1, d: 0.5}
+  joint_6_controller:
+    pid: {p: 0.5, i: 0.0, d: 0.1}
+  tool_controller:
+    pid: {p: 0.5, i: 0.1, d: 0.1}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="justool">
+  <link
+    name="base_tool">
+    <inertial>
+      <origin
+        xyz="3.23928900433173E-19 -0.000280672781129251 0.0299986870177669"
+        rpy="0 0 0" />
+      <mass
+        value="0.061286086776219" />
+      <inertia
+        ixx="3.21208626920349E-05"
+        ixy="1.00820073326552E-21"
+        ixz="4.21091576797561E-22"
+        iyy="1.88064093158723E-05"
+        iyz="3.09755144245559E-09"
+        izz="1.84753678032904E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justool/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justool/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="tool_link">
+    <inertial>
+      <origin
+        xyz="0.0215098182497306 -0.0215937309664561 3.07442347451494E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.142304957900483" />
+      <inertia
+        ixx="0.000231705805927366"
+        ixy="-0.0001397982973575"
+        ixz="1.20280331758759E-20"
+        iyy="0.000222407877317925"
+        iyz="-8.51817071062925E-21"
+        izz="0.000411131910440016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justool/meshes/tool_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justool/meshes/tool_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tool_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.00028067 0.029999"
+      rpy="1.5708 -1.5614 -1.5708" />
+    <parent
+      link="base_tool" />
+    <child
+      link="tool_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="6.28"/>
+  </joint>
+  <transmission name="trans_tool_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="tool_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="tool_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+</robot>

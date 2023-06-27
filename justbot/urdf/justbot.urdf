@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="justbot">
+  <link name="world" />
+  <joint name="fixed" type="fixed">
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.501523162094E-18 -9.98976698985072E-19 0.0242878466872111"
+        rpy="0 0 0" />
+      <mass
+        value="0.509723408044944" />
+      <inertia
+        ixx="0.000562062131048509"
+        ixy="2.80703650453303E-36"
+        ixz="-1.70019905570331E-20"
+        iyy="0.000562062131048509"
+        iyz="-1.99886657001989E-20"
+        izz="0.000837077362549" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="1.0171556094959E-18 -1.09336923950592E-17 0.0549055408748314"
+        rpy="0 0 0" />
+      <mass
+        value="0.830265482457438" />
+      <inertia
+        ixx="0.00203681888094444"
+        ixy="-1.30713124502344E-21"
+        ixz="3.46319733153048E-21"
+        iyy="0.00205357404176359"
+        iyz="-1.53095519710022E-19"
+        izz="0.000945935093570191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_1.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.060625"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"/>
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.183102814406912 9.35362898246694E-15 0.124079659201039"
+        rpy="0 0 0" />
+      <mass
+        value="3.39003888115763" />
+      <inertia
+        ixx="0.00613550007773526"
+        ixy="-2.5317738236829E-18"
+        ixz="-0.00572330212867927"
+        iyy="0.0758546236119664"
+        iyz="7.38649342611205E-19"
+        izz="0.0731564879724906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_2.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_2.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.101875"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"/>
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.161388593638685 -9.4091401336982E-15 0.119864473827281"
+        rpy="0 0 0" />
+      <mass
+        value="1.81866200086027" />
+      <inertia
+        ixx="0.00322307899255989"
+        ixy="2.39517592047964E-18"
+        ixz="-0.00394347878837956"
+        iyy="0.0351952914651063"
+        iyz="1.30904401378256E-18"
+        izz="0.0329915795132328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_3.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_3.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.425000000000003 0 0.1333"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14"/>
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-3.44169137633799E-15 0.0115289114502005 0.0987967449476777"
+        rpy="0 0 0" />
+      <mass
+        value="0.564199619415974" />
+      <inertia
+        ixx="0.00154204456756717"
+        ixy="-1.2848144879846E-22"
+        ixz="3.79774791975331E-20"
+        iyy="0.0013498280848747"
+        iyz="-0.000224430129948098"
+        izz="0.000476587370665697" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_4.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_4.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.3922 0 0.1333"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="6.28"/>
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="3.5527136788005E-15 4.16333634234434E-16 0.0909930736404903"
+        rpy="0 0 0" />
+      <mass
+        value="0.171617251235193" />
+      <inertia
+        ixx="0.000126937476961934"
+        ixy="2.58335477231217E-21"
+        ixz="-4.233199045199E-21"
+        iyy="0.000130913555164134"
+        iyz="2.81320832287711E-21"
+        izz="9.66086256175968E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_5.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_5.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1333"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="6.28"/>
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-3.33066907387547E-15 9.32587340685131E-15 0.0533108106325026"
+        rpy="0 0 0" />
+      <mass
+        value="0.239201755179413" />
+      <inertia
+        ixx="0.000285340334026843"
+        ixy="9.58284049491214E-22"
+        ixz="-7.36427033576577E-20"
+        iyy="0.00028534057911407"
+        iyz="-1.07085344422525E-20"
+        izz="9.33267857592035E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_6.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://justbot/meshes/link_6.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0997"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="6.28"/>
+  </joint>
+  <link
+    name="link_n">
+    <inertial>
+      <origin
+        xyz="0.015093468285773 9.35362898246694E-15 0.0450358154327502"
+        rpy="0 0 0" />
+      <mass
+        value="0.203591044676702" />
+      <inertia
+        ixx="0.000241214315615011"
+        ixy="-2.44021835354509E-19"
+        ixz="0.000139798297357499"
+        iyy="0.00044325277313205"
+        iyz="1.67778796901328E-19"
+        izz="0.000250181144749441" />
+    </inertial>
+  </link>
+  <joint
+    name="joint_n"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0995999999999999"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_n" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <transmission name="trans_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_4_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_5_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_6_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+</robot>

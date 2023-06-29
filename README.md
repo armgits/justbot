@@ -8,13 +8,13 @@ Justbot is 7 degrees of freedom (6 DOF arm and 1 DOF tool) articulated manipulat
 The robot is tasked with removal of a laptop back cover by first unscrewing and then lifting the back cover.
 
 ## Description of contents
-`cad/` consists the Solidworks part and assembly files of the robot and tool plus Blender files of the same to export in DAE file format for the meshes.
+`cad/` consists of the Solidworks part and assembly files of the robot and tool plus Blender files of the same to export in DAE file format for the meshes.
 
-`code/` consists a Python file and Jupyter Notebooks for calculating forward kinematics and the Jacobian for inverse kinematics.
+`code/` consists of a Python file and Jupyter Notebooks for calculating forward kinematics and the Jacobian for inverse kinematics.
 
-`dockerfile/` consists the necessary files to build the Docker image of this project. The image can then be used to run the container as an executable for simulating in Gazebo. Building the Docker image locally is not recommended, an up-to-date image is available on [Dockerhub](https://hub.docker.com/r/armdocks/justbot).
+`dockerfile/` consists of the necessary files to build the Docker image of this project. The image can then be used to run the container as an executable for simulating in Gazebo. Building the Docker image locally is not recommended, an up-to-date image is available on [Dockerhub](https://hub.docker.com/r/armdocks/justbot).
 
-`image/` just consists the GIF image used on the README page.
+`image/` just consists of the GIF image used on the README page.
 
 `justbot/` and `justool/` are the ROS packages for the arm and tool respectively. Justbot package has the `move.py` file which is the Python node that computes the inverse kinematics and publishes the joint values.
 

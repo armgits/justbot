@@ -30,16 +30,18 @@ ENV ROS_DISTRO noetic
 
 # noetic desktop installation
 RUN apt update \
-  && apt install -y --no-install-recommends ros-noetic-desktop \
+  && apt install -y --no-install-recommends ros-noetic-ros-base \
     python3-rosdep \
     python3-rosinstall \
-    python3-rosinstall-generator \
     python3-wstool \
     build-essential \
     ros-noetic-gazebo-ros-pkgs \
     ros-noetic-gazebo-ros-control \
     ros-noetic-joint-state-controller \
     ros-noetic-effort-controllers \
+    ros-noetic-xacro \
+    ros-noetic-robot-state-publisher \
+    ros-noetic-joint-state-publisher \
     git \
     python-is-python3 \
   && curl -sSL http://get.gazebosim.org | sh \

@@ -34,7 +34,7 @@ docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix armdocks/jus
 ```
 >Tip: The -it argument can be omitted from the above command for a less verbose, clean terminal output.
 
->Note: The simulation might lag when the Gazebo window opens maximized, this is expected since GPU acceleration is deliberately not used to maximize compatibility.
+>Note: The simulation might lag when the Gazebo window opens maximized, shrink the window to improve framerate.
 
 ### On local machine
 This requires Ubuntu Focal (20.04) with ROS Noetic full desktop installation. Additional ROS packages that might be required are [joint state](http://wiki.ros.org/joint_state_controller) and [effort](http://wiki.ros.org/effort_controllers) controller packages and the [PyYAML](https://pypi.org/project/PyYAML/) Python package.

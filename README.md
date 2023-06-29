@@ -21,7 +21,7 @@ The robot is tasked with removal of a laptop back cover by first unscrewing and 
 ## Running the project
 This project can only run on Linux at the moment in two ways:
 ### In Docker container (Recommended)
-Docker (Linux) installation is required. To install, refer the [documentation](https://docs.docker.com/engine/install/)
+This is the easiest, most convenient way to run the project demo as an executable. Docker (Linux) installation is required, to install refer the [documentation](https://docs.docker.com/engine/install/)
 
 Pull the Docker image of this project from Dockerhub.
 ```

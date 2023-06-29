@@ -3,6 +3,10 @@ Justbot is 7 degrees of freedom (6 DOF arm and 1 DOF tool) articulated manipulat
 
 <p align="center"><img src="./image/justbot.gif"></p>
 
+[Full clip of the above demo](https://drive.google.com/file/d/1GjaewmEU0MJf0c27nm_vdGoYoIf93K8t/view)
+
+The robot is tasked with removal of a laptop back cover by first unscrewing and then lifting the back cover.
+
 ## Description of contents
 `cad/` consists the Solidworks part and assembly files of the robot and tool plus Blender files of the same to export in DAE file format for the meshes.
 

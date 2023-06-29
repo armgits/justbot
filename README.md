@@ -12,7 +12,7 @@ The robot is tasked with removal of a laptop back cover by first unscrewing and 
 
 `code/` consists a Python file and Jupyter Notebooks for calculating forward kinematics and the Jacobian for inverse kinematics.
 
-`dockerfile/` consists the necessary files to build the Docker image of this project. The image can then be used to run the container as an executable for simulating in Gazebo. Building the Docker image locally is not recommended, an up-to-date image is available on the Dockerhub.
+`dockerfile/` consists the necessary files to build the Docker image of this project. The image can then be used to run the container as an executable for simulating in Gazebo. Building the Docker image locally is not recommended, an up-to-date image is available on [Dockerhub](https://hub.docker.com/r/armdocks/justbot).
 
 `image/` just consists the GIF image used on the README page.
 
@@ -23,7 +23,7 @@ This project can only run on Linux at the moment in two ways:
 ### In Docker container (Recommended)
 Docker (Linux) installation is required. To install, refer the [documentation](https://docs.docker.com/engine/install/)
 
-Pull the Docker image of this project from Dockerhub
+Pull the Docker image of this project from Dockerhub.
 ```
 docker pull armdocks/justbot
 ```

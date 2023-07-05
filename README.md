@@ -3,7 +3,7 @@ Justbot is 7 degrees of freedom (6 DOF arm and 1 DOF tool) articulated manipulat
 
 <p align="center"><img src="./image/justbot.gif"></p>
 
-[Full clip of the above demo](https://drive.google.com/file/d/1GjaewmEU0MJf0c27nm_vdGoYoIf93K8t/view)
+[Full clip of the above demo](https://drive.google.com/file/d/1GjaewmEU0MJf0c27nm_vdGoYoIf93K8t/view). Above image is 2.5 times the actual simulation speed for demonstration purpose.
 
 The robot is tasked the with removal of a laptop back cover by first unscrewing and then lifting the back cover.
 
